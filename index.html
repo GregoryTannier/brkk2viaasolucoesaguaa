@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Netmais Telecom | Serviços de Telecomunicações em Palmas - TO</title>
+
+  <meta name="description" content="Site institucional da Lucaroni Telecom LTDA, CNPJ 17.310.450/0001-83, empresa de telecomunicações localizada em Palmas - TO.">
+
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Lucaroni Telecom LTDA">
+
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --surface:#ffffff;
+      --surface-soft:#eef4ff;
+      --text:#152033;
+      --muted:#667085;
+      --primary:#155eef;
+      --primary-dark:#0d47bd;
+      --success:#15803d;
+      --line:#dde3ec;
+      --shadow:0 18px 50px rgba(20,40,80,.08);
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
+
+    a{color:inherit}
+    .container{width:min(1120px,92%);margin:0 auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      font-weight:900;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:var(--primary);
+      color:#fff;
+      font-weight:900;
+    }
+
+    nav{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:700;
+      font-size:.93rem;
+    }
+
+    nav a:hover{color:var(--primary)}
+
+    .hero{
+      padding:78px 0 58px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(21,94,239,.12), transparent 32%),
+        linear-gradient(180deg,#fff 0%,#f5f7fb 100%);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      background:#eaf1ff;
+      color:var(--primary);
+      border:1px solid #cfe0ff;
+      border-radius:999px;
+      font-size:.86rem;
+      font-weight:800;
+    }
+
+    h1{
+      font-size:clamp(2.4rem,5vw,4.6rem);
+      line-height:1.05;
+      letter-spacing:-.045em;
+      margin:18px 0;
+      max-width:760px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:1.14rem;
+      max-width:720px;
+      margin:0;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+
+    .btn{
+      min-height:48px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .btn-primary:hover{background:var(--primary-dark)}
+
+    .btn-light{
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .company-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .company-box h2{
+      margin:0 0 4px;
+      font-size:1.55rem;
+    }
+
+    .company-box .legal-name{
+      color:var(--muted);
+      margin-bottom:22px;
+    }
+
+    .status{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--success);
+      font-weight:800;
+      margin-bottom:22px;
+    }
+
+    .dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--success);
+    }
+
+    .quick-info{
+      display:grid;
+      gap:13px;
+    }
+
+    .quick-info div{
+      padding-top:13px;
+      border-top:1px solid #edf0f5;
+    }
+
+    .quick-info span{
+      display:block;
+      color:var(--muted);
+      font-size:.82rem;
+      font-weight:700;
+      margin-bottom:2px;
+    }
+
+    section{padding:56px 0}
+
+    .section-title{
+      margin:0 0 8px;
+      font-size:clamp(1.85rem,3vw,2.7rem);
+      letter-spacing:-.03em;
+    }
+
+    .section-lead{
+      margin:0 0 26px;
+      color:var(--muted);
+      max-width:800px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:1.12rem;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .data-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .data-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+    }
+
+    .row{
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:18px;
+      padding:12px 0;
+      border-bottom:1px solid #edf0f5;
+    }
+
+    .row:last-child{border-bottom:0}
+
+    .label{
+      color:var(--muted);
+      font-size:.88rem;
+      font-weight:700;
+    }
+
+    .value{
+      font-weight:800;
+      word-break:break-word;
+    }
+
+    .contact{
+      background:#14213d;
+      color:#fff;
+      border-radius:26px;
+      padding:30px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+
+    .contact h3{
+      margin-top:0;
+      font-size:1.35rem;
+    }
+
+    .contact p{
+      color:#d1d7e2;
+      margin-bottom:12px;
+    }
+
+    .contact a{
+      color:#fff;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .legal{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      margin-bottom:18px;
+    }
+
+    .legal h3{margin-top:0}
+    .legal p{color:var(--muted)}
+
+    footer{
+      margin-top:20px;
+      border-top:1px solid var(--line);
+      padding:28px 0 38px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:900px){
+      nav{display:none}
+      .hero-grid,
+      .data-grid,
+      .contact,
+      .cards{
+        grid-template-columns:1fr;
+      }
+      .row{
+        grid-template-columns:1fr;
+        gap:3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">N</span>
+      <span>Netmais Telecom</span>
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#contato">Contato</a>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#termos">Termos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="sobre">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="badge">Telecomunicações • Palmas - TO</span>
+
+        <h1>Telecomunicações e conectividade em Palmas.</h1>
+
+        <p>
+          A Netmais Telecom é o nome fantasia da Lucaroni Telecom LTDA,
+          empresa brasileira sediada em Palmas, Tocantins.
+          Esta página apresenta informações institucionais, cadastrais e canais
+          oficiais de contato da empresa.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+556331420375">
+            Entrar em contato
+          </a>
+
+          <a class="btn btn-light" href="#empresa">
+            Consultar dados da empresa
+          </a>
+        </div>
+      </div>
+
+      <aside class="company-box">
+        <h2>Netmais Telecom</h2>
+        <div class="legal-name">Lucaroni Telecom LTDA</div>
+
+        <div class="status">
+          <span class="dot"></span>
+          Situação cadastral: Ativa
+        </div>
+
+        <div class="quick-info">
+          <div>
+            <span>CNPJ</span>
+            <strong>17.310.450/0001-83</strong>
+          </div>
+
+          <div>
+            <span>Data de abertura</span>
+            <strong>03/12/2012</strong>
+          </div>
+
+          <div>
+            <span>Localização</span>
+            <strong>Palmas - TO</strong>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+
+      <h2 class="section-title">Serviços</h2>
+
+      <p class="section-lead">
+        A Netmais Telecom atua no segmento de telecomunicações e conectividade.
+        Consulte diretamente a empresa para informações sobre cobertura,
+        disponibilidade, instalação e condições comerciais.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Telecomunicações</h3>
+          <p>
+            Serviços de telecomunicações conforme a disponibilidade técnica e
+            a área de cobertura da empresa.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Conectividade</h3>
+          <p>
+            Informações sobre viabilidade, instalação e planos podem ser obtidas
+            pelos canais oficiais de atendimento.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Atendimento</h3>
+          <p>
+            Canal institucional para informações comerciais e contato
+            com a Lucaroni Telecom LTDA.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="empresa">
+    <div class="container">
+
+      <h2 class="section-title">Dados da empresa</h2>
+
+      <p class="section-lead">
+        Informações cadastrais da Lucaroni Telecom LTDA.
+      </p>
+
+      <div class="data-grid">
+
+        <div class="data-card">
+
+          <div class="row">
+            <div class="label">Nome fantasia</div>
+            <div class="value">Netmais Telecom</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Razão social</div>
+            <div class="value">Lucaroni Telecom LTDA</div>
+          </div>
+
+          <div class="row">
+            <div class="label">CNPJ</div>
+            <div class="value">17.310.450/0001-83</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Data de abertura</div>
+            <div class="value">03/12/2012</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Tipo</div>
+            <div class="value">Matriz</div>
+          </div>
+
+        </div>
+
+        <div class="data-card">
+
+          <div class="row">
+            <div class="label">Porte</div>
+            <div class="value">Micro Empresa</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Natureza jurídica</div>
+            <div class="value">Sociedade Empresária Limitada</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Opção pelo MEI</div>
+            <div class="value">Não</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Simples Nacional</div>
+            <div class="value">Não — exclusão em 31/08/2025</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Capital social</div>
+            <div class="value">R$ 250.000,00</div>
+          </div>
+
+          <div class="row">
+            <div class="label">Situação cadastral</div>
+            <div class="value">Ativa desde 03/12/2012</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+
+      <h2 class="section-title">Contato e localização</h2>
+
+      <p class="section-lead">
+        Canais e endereço informados para contato com a empresa.
+      </p>
+
+      <div class="contact">
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>
+            Telefone<br>
+            <a href="tel:+556331420375">(63) 3142-0375</a>
+          </p>
+
+          <p>
+            E-mail<br>
+            <a href="mailto:paralegal@contaxx.com.br">paralegal@contaxx.com.br</a>
+          </p>
+        </div>
+
+        <div>
+          <h3>Endereço</h3>
+
+          <p>
+            Quadra Acsu So 120, Avenida Ns 1, SN<br>
+            Conj 2, Lote 17, Bloco A, Sala 17<br>
+            Edif. Residencial Malbec<br>
+            Plano Diretor Sul<br>
+            Palmas - TO<br>
+            CEP 77019-404
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="privacidade">
+    <div class="container">
+
+      <h2 class="section-title">Política de Privacidade</h2>
+
+      <div class="legal">
+        <h3>Privacidade e dados pessoais</h3>
+
+        <p>
+          Esta página institucional não possui formulário de cadastro, login ou
+          pagamento. Ao utilizar os links de telefone ou e-mail, o contato é
+          realizado diretamente pelo aplicativo ou serviço escolhido pelo usuário.
+        </p>
+
+        <p>
+          Caso informações pessoais sejam enviadas voluntariamente por e-mail ou
+          telefone, elas devem ser utilizadas exclusivamente para atendimento,
+          resposta à solicitação e relacionamento comercial relacionado aos serviços
+          da empresa, observada a legislação aplicável.
+        </p>
+
+        <p>
+          Para dúvidas relacionadas à privacidade, utilize o e-mail
+          <strong>paralegal@contaxx.com.br</strong>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="termos">
+    <div class="container">
+
+      <h2 class="section-title">Termos de Uso</h2>
+
+      <div class="legal">
+        <h3>Uso desta página</h3>
+
+        <p>
+          Esta página tem finalidade institucional e informativa. Informações sobre
+          planos, cobertura, preços, instalação e condições comerciais devem ser
+          confirmadas diretamente com a Lucaroni Telecom LTDA.
+        </p>
+
+        <p>
+          Os dados cadastrais apresentados identificam a empresa responsável pelas
+          informações institucionais publicadas nesta página.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+
+    <div>
+      <strong>Lucaroni Telecom LTDA</strong><br>
+      CNPJ 17.310.450/0001-83
+    </div>
+
+    <div>
+      Quadra Acsu So 120, Avenida Ns 1, SN • Conj 2, Lote 17, Bloco A, Sala 17 • Plano Diretor Sul • Palmas - TO • CEP 77019-404
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
